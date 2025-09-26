@@ -1,0 +1,8 @@
+<article class="doc-content">
+  @if (markdownPath()) {
+  <markdown [src]="markdownPath()"> </markdown>
+  } @else {
+  <h2>Document Not Found</h2>
+  <p>Could not determine the document path from the URL.</p>
+  }
+</article>

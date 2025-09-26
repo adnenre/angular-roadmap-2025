@@ -1,0 +1,20 @@
+<nav class="flex items-center space-x-2 text-sm text-gray-600 mt-1">
+  @for (crumb of breadcrumbs(); track crumb.name; let last = $last; let i = $index) {
+  <div class="flex items-center space-x-2">
+    @if (!last) {
+    <button
+      (click)="onBreadcrumbClick(i)"
+      class="hover:text-blue-600 transition-colors cursor-pointer"
+    >
+      {{ crumb.name }}
+    </button>
+    } @if (last) {
+    <span class="text-gray-800 font-medium">
+      {{ crumb.name }}
+    </span>
+    } @if (!last) {
+    <span class="text-gray-400">/</span>
+    }
+  </div>
+  }
+</nav>

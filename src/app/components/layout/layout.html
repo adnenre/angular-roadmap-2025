@@ -1,0 +1,19 @@
+<div class="flex h-screen bg-gray-50">
+  <!-- Sidebar -->
+  <div class="w-80 h-full flex-shrink-0">
+    <app-sidebar [menuItems]="menuItems" (itemSelect)="onItemSelect($event)"> </app-sidebar>
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex-1 flex flex-col overflow-hidden">
+    <!-- Header with Breadcrumb -->
+    <header class="h-16 bg-white shadow-sm border-b p-4">
+      <app-breadcrumb></app-breadcrumb>
+    </header>
+
+    <!-- Page Content -->
+    <main class="flex-1 overflow-auto p-8">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

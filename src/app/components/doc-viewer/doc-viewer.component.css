@@ -1,0 +1,11 @@
+.doc-content {
+  /* Apply styles for a readable document */
+  max-width: 800px;
+  line-height: 1.7;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.doc-content h2 {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
